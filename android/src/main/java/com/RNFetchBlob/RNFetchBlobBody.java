@@ -185,7 +185,8 @@ class RNFetchBlobBody extends RequestBody{
      * @throws IOException
      */
     private File createMultipartBodyCache() throws IOException {
-        String boundary = "RNFetchBlob-" + mTaskId;
+//         String boundary = "RNFetchBlob-" + mTaskId;
+        String boundary = "------------" + mTaskId;
 
         File outputDir = RNFetchBlob.RCTContext.getCacheDir(); // context being the Activity pointer
         File outputFile = File.createTempFile("rnfb-form-tmp", "", outputDir);
