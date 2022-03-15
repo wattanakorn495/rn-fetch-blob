@@ -360,7 +360,8 @@ public class RNFetchBlobReq extends BroadcastReceiver implements Runnable {
                     builder.method(method, requestBody);
                     break;
                 case Form:
-                    String boundary = "RNFetchBlob-" + taskId;
+//                     String boundary = "RNFetchBlob-" + taskId;
+                    String boundary = "------------" + taskId;
                     requestBody = new RNFetchBlobBody(taskId)
                             .chunkedEncoding(isChunkedRequest)
                             .setRequestType(requestType)
