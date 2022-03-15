@@ -46,7 +46,8 @@
     NSNumber * timeStampObj = [NSNumber numberWithDouble: timeStamp];
 
     // generate boundary
-    __block NSString * boundary = [NSString stringWithFormat:@"RNFetchBlob%d", timeStampObj];
+//     __block NSString * boundary = [NSString stringWithFormat:@"RNFetchBlob%d", timeStampObj];
+    __block NSString * boundary = [NSString stringWithFormat:@"-----------%d", timeStampObj];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         __block NSMutableData * postData = [[NSMutableData alloc] init];
         // combine multipart/form-data body
